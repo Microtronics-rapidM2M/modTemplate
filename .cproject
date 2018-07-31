@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401" moduleId="org.eclipse.cdt.core.settings" name="armcc_Cortex-M3">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.Keil armcc Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.Keil armlink Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="axf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="generic for M22 &amp; M23" errorParsers="org.eclipse.cdt.ui.Keil armcc Error Parser;org.eclipse.cdt.ui.Keil armlink Error Parser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser" id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401" name="armcc_Cortex-M3" parent="cdt.managedbuild.config.gnu.cross.exe.release" postannouncebuildStep="Run Post-build steps" postbuildStep="${ProjDirPath}/post-build.bat &quot;${BuildArtifactFileBaseName}&quot; &quot;${BuildArtifactFileName}&quot;" preannouncebuildStep="" prebuildStep="">
+					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401." name="/" resourcePath="">
+						<toolChain errorParsers="" id="cdt.managedbuild.toolchain.gnu.cross.exe.release.773352388" name="Cross GCC" nonInternalBuilderId="cdt.managedbuild.builder.gnu.cross" resourceTypeBasedDiscovery="true" superClass="cdt.managedbuild.toolchain.gnu.cross.exe.release">
+							<option id="cdt.managedbuild.option.gnu.cross.prefix.655809746" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" value="" valueType="string"/>
+							<option id="cdt.managedbuild.option.gnu.cross.path.1935126090" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" value="C:\Keil_v5\ARM\ARMCC\bin" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.1530758101" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
+							<builder autoBuildTarget="all" buildPath="${workspace_loc:/STM32_Sys}/Release" cleanBuildTarget="clean" errorParsers="" id="org.eclipse.cdt.build.core.internal.builder.1140121288" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="org.eclipse.cdt.build.core.internal.builder"/>
+							<tool command="armcc" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="cdt.managedbuild.tool.gnu.cross.c.compiler.570882485" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
+								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.option.optimization.level.1373315826" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.c.optimization.level.most" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.debugging.level.2026030460" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.dialect.std.1395740629" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.preprocessor.def.symbols.556303223" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="NDEBUG"/>
+									<listOptionValue builtIn="false" value="__CMSIS_GENERIC"/>
+									<listOptionValue builtIn="false" value="ARM_MATH_CM3"/>
+								</option>
+								<option id="gnu.c.compiler.option.misc.other.1883537791" name="Other flags" superClass="gnu.c.compiler.option.misc.other" useByScannerDiscovery="false" value="--preinclude=&quot;${ProjDirPath}/CMSIS/Include/core_cm3.h&quot; -c --cpu Cortex-M3 -g --c99 --apcs=interwork/ropi/rwpi --no-lower-rwpi --split_sections" valueType="string"/>
+								<option id="gnu.c.compiler.option.warnings.allwarn.993463404" name="All warnings (-Wall)" superClass="gnu.c.compiler.option.warnings.allwarn" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<option id="gnu.c.compiler.option.include.paths.978116540" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/CMSIS/Include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/amx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src&quot;"/>
+								</option>
+								<option id="gnu.c.compiler.option.include.files.2061295327" name="Include files (-include)" superClass="gnu.c.compiler.option.include.files" useByScannerDiscovery="false"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1104690578" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.328333378" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler">
+								<option id="gnu.cpp.compiler.option.optimization.level.1685202168" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.debugging.level.1655064792" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+							</tool>
+							<tool command="armlink" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GLDErrorParser" id="cdt.managedbuild.tool.gnu.cross.c.linker.1128572333" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker">
+								<option id="gnu.c.link.option.ldflags.1514056265" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="--cpu Cortex-M3 --entry=pawn_ModuleInit --strict --scatter &quot;${ProjDirPath}/armcc.sct&quot; --summary_stderr --info summarysizes --map --list &quot;${BuildArtifactFileBaseName}.map&quot; --xref --callgraph --symbols --info sizes --info totals --info unused --info veneers  --diag_style=gnu" valueType="string"/>
+								<option id="gnu.c.link.option.userobjs.423711880" name="Other objects" superClass="gnu.c.link.option.userobjs"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.1804225288" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.1446538505" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.archiver.1587934278" name="Cross GCC Archiver" superClass="cdt.managedbuild.tool.gnu.cross.archiver"/>
+							<tool command="armasm" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GASErrorParser" id="cdt.managedbuild.tool.gnu.cross.assembler.561497117" name="Cross GCC Assembler" superClass="cdt.managedbuild.tool.gnu.cross.assembler">
+								<option id="gnu.both.asm.option.flags.1871087632" name="Assembler flags" superClass="gnu.both.asm.option.flags" value="--cpu Cortex-M3 -g --apcs=interwork/ropi/rwpi --no_lower_rwpi" valueType="string"/>
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1065012677" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.405439747" name="map.c" rcbsApplicability="disable" resourcePath="dhara/map.c" toolsToInvoke="cdt.managedbuild.tool.gnu.cross.c.compiler.570882485.1188728203">
+						<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.570882485.1188728203" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler.570882485">
+							<option id="gnu.c.compiler.option.misc.other.1327870960" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-c --cpu Cortex-M4.fp -g --c99 --apcs=interwork --split_sections --diag_suppress=186 --diag_suppress=177" valueType="string"/>
+							<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.7932" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+						</tool>
+						<tool customBuildStep="true" id="org.eclipse.cdt.managedbuilder.ui.rcbs.1250200522" name="Resource Custom Build Step">
+							<inputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.inputtype.1957802039" name="Resource Custom Build Step Input Type">
+								<additionalInput kind="additionalinputdependency" paths=""/>
+							</inputType>
+							<outputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.outputtype.985395255" name="Resource Custom Build Step Output Type"/>
+						</tool>
+					</fileInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.433819010" name="ffconf_template.h" rcbsApplicability="disable" resourcePath="FatFs/ffconf_template.h" toolsToInvoke=""/>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1146549134" name="wifi_atwinc1500.h" rcbsApplicability="disable" resourcePath="mdn_com/wifi_atwinc1500.h" toolsToInvoke=""/>
+					<sourceEntries>
+						<entry excluding="amx/pawn.c|amx/helpers.c|amx/float.c|amx/amxstring.c|amx/amxfile.c|amx/amxcore.c|USBH/Src/usbh_conf_template.c|LwIP/api/tcpip.c|LwIP/api/sockets.c|LwIP/api/netifapi.c|LwIP/api/netdb.c|LwIP/api/netbuf.c|LwIP/api/api_msg.c|LwIP/api/api_lib.c|LwIP/netif/slipif.c|LwIP/netif/lowpan6.c|LwIP/netif/ethernetif_template.c|LwIP/netif/ppp|LwIP/apps|HAL/Src/stm32f4xx_hal_mmc.c|HAL/Src/stm32f4xx_ll_utils.c|HAL/Src/stm32f4xx_ll_usart.c|HAL/Src/stm32f4xx_ll_tim.c|HAL/Src/stm32f4xx_ll_spi.c|HAL/Src/stm32f4xx_ll_rtc.c|HAL/Src/stm32f4xx_ll_rng.c|HAL/Src/stm32f4xx_ll_rcc.c|HAL/Src/stm32f4xx_ll_pwr.c|HAL/Src/stm32f4xx_ll_lptim.c|HAL/Src/stm32f4xx_ll_i2c.c|HAL/Src/stm32f4xx_ll_gpio.c|HAL/Src/stm32f4xx_ll_exti.c|HAL/Src/stm32f4xx_ll_dma2d.c|HAL/Src/stm32f4xx_ll_dma.c|HAL/Src/stm32f4xx_ll_dac.c|HAL/Src/stm32f4xx_ll_crc.c|HAL/Src/stm32f4xx_ll_adc.c|HAL/Src/Legacy/stm32f4xx_hal_can.c|lib/sram.c|HAL/Src/stm32f4xx_hal_pwr.c|HAL/Src/stm32f4xx_hal_pwr_ex.c|rm2m/uto_script_fldata.c|rm2m/uto_fw_fldata.c|rm2m/uto_script.c|rm2m/uto_fw.c|FatFs/ffconf_template.h|sec/sec_efm32AES.c|rm2m/jsmn.c|USB/Src/usbd_conf_template.c|obj|HAL/Src/stm32f4xx_ll_sdmmc.c|HAL/Src/stm32f4xx_ll_fsmc.c|HAL/Src/stm32f4xx_hal_wwdg.c|HAL/Src/stm32f4xx_hal_usart.c|HAL/Src/stm32f4xx_hal_timebase_rtc_wakeup_template.c|HAL/Src/stm32f4xx_hal_timebase_rtc_alarm_template.c|HAL/Src/stm32f4xx_hal_sram.c|HAL/Src/stm32f4xx_hal_spdifrx.c|HAL/Src/stm32f4xx_hal_smartcard.c|HAL/Src/stm32f4xx_hal_sd.c|HAL/Src/stm32f4xx_hal_sai.c|HAL/Src/stm32f4xx_hal_sai_ex.c|HAL/Src/stm32f4xx_hal_qspi.c|HAL/Src/stm32f4xx_hal_pccard.c|HAL/Src/stm32f4xx_hal_nor.c|HAL/Src/stm32f4xx_hal_msp_template.c|HAL/Src/stm32f4xx_hal_ltdc.c|HAL/Src/stm32f4xx_hal_ltdc_ex.c|HAL/Src/stm32f4xx_hal_lptim.c|HAL/Src/stm32f4xx_hal_irda.c|HAL/Src/stm32f4xx_hal_i2s.c|HAL/Src/stm32f4xx_hal_i2s_ex.c|HAL/Src/stm32f4xx_hal_i2c_ex.c|HAL/Src/stm32f4xx_hal_hash.c|HAL/Src/stm32f4xx_hal_hash_ex.c|HAL/Src/stm32f4xx_hal_fmpi2c.c|HAL/Src/stm32f4xx_hal_fmpi2c_ex.c|HAL/Src/stm32f4xx_hal_flash_ramfunc.c|HAL/Src/stm32f4xx_hal_dsi.c|HAL/Src/stm32f4xx_hal_dma2d.c|HAL/Src/stm32f4xx_hal_dma_ex.c|HAL/Src/stm32f4xx_hal_dfsdm.c|HAL/Src/stm32f4xx_hal_dcmi.c|HAL/Src/stm32f4xx_hal_dcmi_ex.c|HAL/Src/stm32f4xx_hal_dac.c|HAL/Src/stm32f4xx_hal_dac_ex.c|HAL/Src/stm32f4xx_hal_cryp.c|HAL/Src/stm32f4xx_hal_cryp_ex.c|HAL/Src/stm32f4xx_hal_crc.c|HAL/Src/stm32f4xx_hal_cec.c|HAL/Src/stm32f4xx_hal_can.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule moduleId="ilg.gnuarmeclipse.managedbuild.packs"/>
+		</cconfiguration>
+		<cconfiguration id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1032610215">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1032610215" moduleId="org.eclipse.cdt.core.settings" name="armcc_Cortex-M4.fp">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.Keil armcc Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.Keil armlink Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="axf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="HW floating point opt. for M23" errorParsers="org.eclipse.cdt.ui.Keil armcc Error Parser;org.eclipse.cdt.ui.Keil armlink Error Parser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser" id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1032610215" name="armcc_Cortex-M4.fp" parent="cdt.managedbuild.config.gnu.cross.exe.release" postannouncebuildStep="Run Post-build steps" postbuildStep="${ProjDirPath}/post-build.bat &quot;${BuildArtifactFileBaseName}&quot; &quot;${BuildArtifactFileName}&quot;" preannouncebuildStep="" prebuildStep="">
+					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1032610215." name="/" resourcePath="">
+						<toolChain errorParsers="" id="cdt.managedbuild.toolchain.gnu.cross.exe.release.180831937" name="Cross GCC" nonInternalBuilderId="cdt.managedbuild.builder.gnu.cross" resourceTypeBasedDiscovery="true" superClass="cdt.managedbuild.toolchain.gnu.cross.exe.release">
+							<option id="cdt.managedbuild.option.gnu.cross.prefix.61734445" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" value="" valueType="string"/>
+							<option id="cdt.managedbuild.option.gnu.cross.path.458038647" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" value="C:\Keil_v5\ARM\ARMCC\bin" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.268895540" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
+							<builder autoBuildTarget="all" buildPath="${workspace_loc:/STM32_Sys}/Release" cleanBuildTarget="clean" errorParsers="" id="org.eclipse.cdt.build.core.internal.builder.1551106820" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="org.eclipse.cdt.build.core.internal.builder"/>
+							<tool command="armcc" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="cdt.managedbuild.tool.gnu.cross.c.compiler.1915938621" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
+								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.option.optimization.level.36014484" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.c.optimization.level.most" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.debugging.level.1790623447" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.dialect.std.412070758" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1854882747" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="NDEBUG"/>
+									<listOptionValue builtIn="false" value="__CMSIS_GENERIC"/>
+									<listOptionValue builtIn="false" value="__FPU_PRESENT=1U"/>
+									<listOptionValue builtIn="false" value="ARM_MATH_CM4"/>
+								</option>
+								<option id="gnu.c.compiler.option.misc.other.475232849" name="Other flags" superClass="gnu.c.compiler.option.misc.other" useByScannerDiscovery="false" value="--preinclude=&quot;${ProjDirPath}/CMSIS/Include/core_cm4.h&quot; -c --cpu Cortex-M4.fp -g --c99 --apcs=interwork/ropi/rwpi --no_lower_rwpi --split_sections" valueType="string"/>
+								<option id="gnu.c.compiler.option.warnings.allwarn.327993030" name="All warnings (-Wall)" superClass="gnu.c.compiler.option.warnings.allwarn" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<option id="gnu.c.compiler.option.include.paths.1967746528" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/CMSIS/Include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/amx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src&quot;"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1576163695" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1278386284" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler">
+								<option id="gnu.cpp.compiler.option.optimization.level.119245677" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.debugging.level.423614555" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+							</tool>
+							<tool command="armlink" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GLDErrorParser" id="cdt.managedbuild.tool.gnu.cross.c.linker.1999588449" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker">
+								<option id="gnu.c.link.option.ldflags.741327437" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="--cpu Cortex-M4.fp --entry=pawn_ModuleInit --strict --scatter &quot;${ProjDirPath}/armcc.sct&quot; --summary_stderr --info summarysizes --map --list &quot;${BuildArtifactFileBaseName}.map&quot; --xref --callgraph --symbols --info sizes --info totals --info unused --info veneers  --diag_style=gnu" valueType="string"/>
+								<option id="gnu.c.link.option.userobjs.276547248" name="Other objects" superClass="gnu.c.link.option.userobjs"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.217794119" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.1020033590" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.archiver.699661366" name="Cross GCC Archiver" superClass="cdt.managedbuild.tool.gnu.cross.archiver"/>
+							<tool command="armasm" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GASErrorParser" id="cdt.managedbuild.tool.gnu.cross.assembler.1942303663" name="Cross GCC Assembler" superClass="cdt.managedbuild.tool.gnu.cross.assembler">
+								<option id="gnu.both.asm.option.flags.1619150234" name="Assembler flags" superClass="gnu.both.asm.option.flags" value="--cpu Cortex-M4.fp -g --apcs=interwork/ropi/rwpi --no_lower_rwpi" valueType="string"/>
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.834339874" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1032610215.dhara/map.c" name="map.c" rcbsApplicability="disable" resourcePath="dhara/map.c" toolsToInvoke="cdt.managedbuild.tool.gnu.cross.c.compiler.1369458518">
+						<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.1369458518" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler.1915938621">
+							<option id="gnu.c.compiler.option.misc.other.1622588791" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-c --cpu Cortex-M4.fp -g --c99 --apcs=interwork --split_sections --diag_suppress=186 --diag_suppress=177" valueType="string"/>
+							<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.2131069531" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+						</tool>
+						<tool customBuildStep="true" id="org.eclipse.cdt.managedbuilder.ui.rcbs.1250200522.747104758" name="Resource Custom Build Step">
+							<inputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.inputtype.1957802039.793868566" name="Resource Custom Build Step Input Type">
+								<additionalInput kind="additionalinputdependency" paths=""/>
+							</inputType>
+							<outputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.outputtype.985395255.1544964336" name="Resource Custom Build Step Output Type"/>
+						</tool>
+					</fileInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1032610215.FatFs/ffconf_template.h" name="ffconf_template.h" rcbsApplicability="disable" resourcePath="FatFs/ffconf_template.h" toolsToInvoke=""/>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1032610215.mdn_com/wifi_atwinc1500.h" name="wifi_atwinc1500.h" rcbsApplicability="disable" resourcePath="mdn_com/wifi_atwinc1500.h" toolsToInvoke=""/>
+					<sourceEntries>
+						<entry excluding="amx/pawn.c|amx/helpers.c|amx/float.c|amx/amxstring.c|amx/amxfile.c|amx/amxcore.c|USBH/Src/usbh_conf_template.c|LwIP/api/tcpip.c|LwIP/api/sockets.c|LwIP/api/netifapi.c|LwIP/api/netdb.c|LwIP/api/netbuf.c|LwIP/api/api_msg.c|LwIP/api/api_lib.c|LwIP/netif/slipif.c|LwIP/netif/lowpan6.c|LwIP/netif/ethernetif_template.c|LwIP/netif/ppp|LwIP/apps|HAL/Src/stm32f4xx_hal_mmc.c|HAL/Src/stm32f4xx_ll_utils.c|HAL/Src/stm32f4xx_ll_usart.c|HAL/Src/stm32f4xx_ll_tim.c|HAL/Src/stm32f4xx_ll_spi.c|HAL/Src/stm32f4xx_ll_rtc.c|HAL/Src/stm32f4xx_ll_rng.c|HAL/Src/stm32f4xx_ll_rcc.c|HAL/Src/stm32f4xx_ll_pwr.c|HAL/Src/stm32f4xx_ll_lptim.c|HAL/Src/stm32f4xx_ll_i2c.c|HAL/Src/stm32f4xx_ll_gpio.c|HAL/Src/stm32f4xx_ll_exti.c|HAL/Src/stm32f4xx_ll_dma2d.c|HAL/Src/stm32f4xx_ll_dma.c|HAL/Src/stm32f4xx_ll_dac.c|HAL/Src/stm32f4xx_ll_crc.c|HAL/Src/stm32f4xx_ll_adc.c|HAL/Src/Legacy/stm32f4xx_hal_can.c|lib/sram.c|HAL/Src/stm32f4xx_hal_pwr.c|HAL/Src/stm32f4xx_hal_pwr_ex.c|rm2m/uto_script_fldata.c|rm2m/uto_fw_fldata.c|rm2m/uto_script.c|rm2m/uto_fw.c|FatFs/ffconf_template.h|sec/sec_efm32AES.c|rm2m/jsmn.c|USB/Src/usbd_conf_template.c|obj|HAL/Src/stm32f4xx_ll_sdmmc.c|HAL/Src/stm32f4xx_ll_fsmc.c|HAL/Src/stm32f4xx_hal_wwdg.c|HAL/Src/stm32f4xx_hal_usart.c|HAL/Src/stm32f4xx_hal_timebase_rtc_wakeup_template.c|HAL/Src/stm32f4xx_hal_timebase_rtc_alarm_template.c|HAL/Src/stm32f4xx_hal_sram.c|HAL/Src/stm32f4xx_hal_spdifrx.c|HAL/Src/stm32f4xx_hal_smartcard.c|HAL/Src/stm32f4xx_hal_sd.c|HAL/Src/stm32f4xx_hal_sai.c|HAL/Src/stm32f4xx_hal_sai_ex.c|HAL/Src/stm32f4xx_hal_qspi.c|HAL/Src/stm32f4xx_hal_pccard.c|HAL/Src/stm32f4xx_hal_nor.c|HAL/Src/stm32f4xx_hal_msp_template.c|HAL/Src/stm32f4xx_hal_ltdc.c|HAL/Src/stm32f4xx_hal_ltdc_ex.c|HAL/Src/stm32f4xx_hal_lptim.c|HAL/Src/stm32f4xx_hal_irda.c|HAL/Src/stm32f4xx_hal_i2s.c|HAL/Src/stm32f4xx_hal_i2s_ex.c|HAL/Src/stm32f4xx_hal_i2c_ex.c|HAL/Src/stm32f4xx_hal_hash.c|HAL/Src/stm32f4xx_hal_hash_ex.c|HAL/Src/stm32f4xx_hal_fmpi2c.c|HAL/Src/stm32f4xx_hal_fmpi2c_ex.c|HAL/Src/stm32f4xx_hal_flash_ramfunc.c|HAL/Src/stm32f4xx_hal_dsi.c|HAL/Src/stm32f4xx_hal_dma2d.c|HAL/Src/stm32f4xx_hal_dma_ex.c|HAL/Src/stm32f4xx_hal_dfsdm.c|HAL/Src/stm32f4xx_hal_dcmi.c|HAL/Src/stm32f4xx_hal_dcmi_ex.c|HAL/Src/stm32f4xx_hal_dac.c|HAL/Src/stm32f4xx_hal_dac_ex.c|HAL/Src/stm32f4xx_hal_cryp.c|HAL/Src/stm32f4xx_hal_cryp_ex.c|HAL/Src/stm32f4xx_hal_crc.c|HAL/Src/stm32f4xx_hal_cec.c|HAL/Src/stm32f4xx_hal_can.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule moduleId="ilg.gnuarmeclipse.managedbuild.packs"/>
+		</cconfiguration>
+		<cconfiguration id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1822329534">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1822329534" moduleId="org.eclipse.cdt.core.settings" name="gcc_Cortex-M3">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.Keil armcc Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.Keil armlink Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="axf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="generic for M22 &amp; M23" errorParsers="org.eclipse.cdt.ui.Keil armcc Error Parser;org.eclipse.cdt.ui.Keil armlink Error Parser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser" id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1822329534" name="gcc_Cortex-M3" parent="cdt.managedbuild.config.gnu.cross.exe.release" postannouncebuildStep="Run Post-build steps" postbuildStep="${ProjDirPath}/post-build.bat &quot;${BuildArtifactFileBaseName}&quot; &quot;${BuildArtifactFileName}&quot;" preannouncebuildStep="" prebuildStep="">
+					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1822329534." name="/" resourcePath="">
+						<toolChain errorParsers="" id="cdt.managedbuild.toolchain.gnu.cross.exe.release.1672398752" name="Cross GCC" nonInternalBuilderId="cdt.managedbuild.builder.gnu.cross" resourceTypeBasedDiscovery="true" superClass="cdt.managedbuild.toolchain.gnu.cross.exe.release">
+							<option id="cdt.managedbuild.option.gnu.cross.prefix.1719577643" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" value="arm-none-eabi-" valueType="string"/>
+							<option id="cdt.managedbuild.option.gnu.cross.path.100709917" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" value="C:\Program Files (x86)\GNU Tools ARM Embedded\7 2017-q4-major\bin" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.259124948" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
+							<builder autoBuildTarget="all" buildPath="${workspace_loc:/STM32_Sys}/Release" cleanBuildTarget="clean" errorParsers="" id="org.eclipse.cdt.build.core.internal.builder.1046822085" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="org.eclipse.cdt.build.core.internal.builder"/>
+							<tool command="gcc" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="cdt.managedbuild.tool.gnu.cross.c.compiler.2114506144" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
+								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.option.optimization.level.1953467159" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.c.optimization.level.most" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.debugging.level.50022845" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.default" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.dialect.std.2002631355" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.c99" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.preprocessor.def.symbols.501211200" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="NDEBUG"/>
+									<listOptionValue builtIn="false" value="__CMSIS_GENERIC"/>
+									<listOptionValue builtIn="false" value="ARM_MATH_CM3"/>
+								</option>
+								<option id="gnu.c.compiler.option.misc.other.466388113" name="Other flags" superClass="gnu.c.compiler.option.misc.other" useByScannerDiscovery="false" value="-c -mthumb -mcpu=cortex-m3 --specs=nosys.specs --specs=nano.specs" valueType="string"/>
+								<option id="gnu.c.compiler.option.warnings.allwarn.266500138" name="All warnings (-Wall)" superClass="gnu.c.compiler.option.warnings.allwarn" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="gnu.c.compiler.option.include.paths.1748067951" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/CMSIS/Include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/amx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src&quot;"/>
+								</option>
+								<option id="gnu.c.compiler.option.misc.pic.1004884652" name="Position Independent Code (-fPIC)" superClass="gnu.c.compiler.option.misc.pic" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="gnu.c.compiler.option.optimization.flags.319093313" name="Other optimization flags" superClass="gnu.c.compiler.option.optimization.flags" useByScannerDiscovery="false" value="-fno-plt -fno-strict-aliasing -ffunction-sections -fdata-sections" valueType="string"/>
+								<option id="gnu.c.compiler.option.preprocessor.preprocess.978629351" name="Preprocess only (-E)" superClass="gnu.c.compiler.option.preprocessor.preprocess" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<option id="gnu.c.compiler.option.include.files.511390836" name="Include files (-include)" superClass="gnu.c.compiler.option.include.files" useByScannerDiscovery="false" valueType="includeFiles">
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/CMSIS/Include/core_cm3.h&quot;"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1704974532" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.621014460" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler">
+								<option id="gnu.cpp.compiler.option.optimization.level.546900189" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.debugging.level.936967398" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+							</tool>
+							<tool command="gcc" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GLDErrorParser" id="cdt.managedbuild.tool.gnu.cross.c.linker.781852375" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker">
+								<option id="gnu.c.link.option.ldflags.1909647199" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="-mthumb -mcpu=cortex-m3 --specs=nosys.specs --specs=nano.specs -T &quot;${ProjDirPath}/gcc.ld&quot; -Wall -Wl,--gc-sections,--entry=pawn_ModuleInit,-Map=&quot;${BuildArtifactFileBaseName}.map&quot;,--cref" valueType="string"/>
+								<option id="gnu.c.link.option.userobjs.1819838300" name="Other objects" superClass="gnu.c.link.option.userobjs"/>
+								<option id="gnu.c.link.option.shared.177969509" name="Shared (-shared)" superClass="gnu.c.link.option.shared" value="false" valueType="boolean"/>
+								<option id="gnu.c.link.option.nostart.1553881410" name="Do not use standard start files (-nostartfiles)" superClass="gnu.c.link.option.nostart" value="true" valueType="boolean"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.921849578" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.1764721316" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.archiver.339634729" name="Cross GCC Archiver" superClass="cdt.managedbuild.tool.gnu.cross.archiver"/>
+							<tool command="asm" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GASErrorParser" id="cdt.managedbuild.tool.gnu.cross.assembler.633668110" name="Cross GCC Assembler" superClass="cdt.managedbuild.tool.gnu.cross.assembler">
+								<option id="gnu.both.asm.option.flags.735934442" name="Assembler flags" superClass="gnu.both.asm.option.flags" value="-mthumb -mcpu=cortex-m3 -g -fPIC -ffunction-sections -fdata-sections" valueType="string"/>
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.208640302" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1822329534.dhara/map.c" name="map.c" rcbsApplicability="disable" resourcePath="dhara/map.c" toolsToInvoke="cdt.managedbuild.tool.gnu.cross.c.compiler.1300897735">
+						<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.1300897735" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler.2114506144">
+							<option id="gnu.c.compiler.option.misc.other.820190552" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-c --cpu Cortex-M4.fp -g --c99 --apcs=interwork --split_sections --diag_suppress=186 --diag_suppress=177" valueType="string"/>
+							<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.110868506" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+						</tool>
+						<tool customBuildStep="true" id="org.eclipse.cdt.managedbuilder.ui.rcbs.1250200522.1647018770" name="Resource Custom Build Step">
+							<inputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.inputtype.1957802039.716327753" name="Resource Custom Build Step Input Type">
+								<additionalInput kind="additionalinputdependency" paths=""/>
+							</inputType>
+							<outputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.outputtype.985395255.1707556658" name="Resource Custom Build Step Output Type"/>
+						</tool>
+					</fileInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1822329534.FatFs/ffconf_template.h" name="ffconf_template.h" rcbsApplicability="disable" resourcePath="FatFs/ffconf_template.h" toolsToInvoke=""/>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1822329534.mdn_com/wifi_atwinc1500.h" name="wifi_atwinc1500.h" rcbsApplicability="disable" resourcePath="mdn_com/wifi_atwinc1500.h" toolsToInvoke=""/>
+					<sourceEntries>
+						<entry excluding="amx/pawn.c|amx/helpers.c|amx/float.c|amx/amxstring.c|amx/amxfile.c|amx/amxcore.c|USBH/Src/usbh_conf_template.c|LwIP/api/tcpip.c|LwIP/api/sockets.c|LwIP/api/netifapi.c|LwIP/api/netdb.c|LwIP/api/netbuf.c|LwIP/api/api_msg.c|LwIP/api/api_lib.c|LwIP/netif/slipif.c|LwIP/netif/lowpan6.c|LwIP/netif/ethernetif_template.c|LwIP/netif/ppp|LwIP/apps|HAL/Src/stm32f4xx_hal_mmc.c|HAL/Src/stm32f4xx_ll_utils.c|HAL/Src/stm32f4xx_ll_usart.c|HAL/Src/stm32f4xx_ll_tim.c|HAL/Src/stm32f4xx_ll_spi.c|HAL/Src/stm32f4xx_ll_rtc.c|HAL/Src/stm32f4xx_ll_rng.c|HAL/Src/stm32f4xx_ll_rcc.c|HAL/Src/stm32f4xx_ll_pwr.c|HAL/Src/stm32f4xx_ll_lptim.c|HAL/Src/stm32f4xx_ll_i2c.c|HAL/Src/stm32f4xx_ll_gpio.c|HAL/Src/stm32f4xx_ll_exti.c|HAL/Src/stm32f4xx_ll_dma2d.c|HAL/Src/stm32f4xx_ll_dma.c|HAL/Src/stm32f4xx_ll_dac.c|HAL/Src/stm32f4xx_ll_crc.c|HAL/Src/stm32f4xx_ll_adc.c|HAL/Src/Legacy/stm32f4xx_hal_can.c|lib/sram.c|HAL/Src/stm32f4xx_hal_pwr.c|HAL/Src/stm32f4xx_hal_pwr_ex.c|rm2m/uto_script_fldata.c|rm2m/uto_fw_fldata.c|rm2m/uto_script.c|rm2m/uto_fw.c|FatFs/ffconf_template.h|sec/sec_efm32AES.c|rm2m/jsmn.c|USB/Src/usbd_conf_template.c|obj|HAL/Src/stm32f4xx_ll_sdmmc.c|HAL/Src/stm32f4xx_ll_fsmc.c|HAL/Src/stm32f4xx_hal_wwdg.c|HAL/Src/stm32f4xx_hal_usart.c|HAL/Src/stm32f4xx_hal_timebase_rtc_wakeup_template.c|HAL/Src/stm32f4xx_hal_timebase_rtc_alarm_template.c|HAL/Src/stm32f4xx_hal_sram.c|HAL/Src/stm32f4xx_hal_spdifrx.c|HAL/Src/stm32f4xx_hal_smartcard.c|HAL/Src/stm32f4xx_hal_sd.c|HAL/Src/stm32f4xx_hal_sai.c|HAL/Src/stm32f4xx_hal_sai_ex.c|HAL/Src/stm32f4xx_hal_qspi.c|HAL/Src/stm32f4xx_hal_pccard.c|HAL/Src/stm32f4xx_hal_nor.c|HAL/Src/stm32f4xx_hal_msp_template.c|HAL/Src/stm32f4xx_hal_ltdc.c|HAL/Src/stm32f4xx_hal_ltdc_ex.c|HAL/Src/stm32f4xx_hal_lptim.c|HAL/Src/stm32f4xx_hal_irda.c|HAL/Src/stm32f4xx_hal_i2s.c|HAL/Src/stm32f4xx_hal_i2s_ex.c|HAL/Src/stm32f4xx_hal_i2c_ex.c|HAL/Src/stm32f4xx_hal_hash.c|HAL/Src/stm32f4xx_hal_hash_ex.c|HAL/Src/stm32f4xx_hal_fmpi2c.c|HAL/Src/stm32f4xx_hal_fmpi2c_ex.c|HAL/Src/stm32f4xx_hal_flash_ramfunc.c|HAL/Src/stm32f4xx_hal_dsi.c|HAL/Src/stm32f4xx_hal_dma2d.c|HAL/Src/stm32f4xx_hal_dma_ex.c|HAL/Src/stm32f4xx_hal_dfsdm.c|HAL/Src/stm32f4xx_hal_dcmi.c|HAL/Src/stm32f4xx_hal_dcmi_ex.c|HAL/Src/stm32f4xx_hal_dac.c|HAL/Src/stm32f4xx_hal_dac_ex.c|HAL/Src/stm32f4xx_hal_cryp.c|HAL/Src/stm32f4xx_hal_cryp_ex.c|HAL/Src/stm32f4xx_hal_crc.c|HAL/Src/stm32f4xx_hal_cec.c|HAL/Src/stm32f4xx_hal_can.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule moduleId="ilg.gnuarmeclipse.managedbuild.packs"/>
+		</cconfiguration>
+		<cconfiguration id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1822329534.56916247">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1822329534.56916247" moduleId="org.eclipse.cdt.core.settings" name="gcc_Cortex-M4.fp">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.Keil armcc Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.Keil armlink Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="axf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="HW floating point opt. for M23" errorParsers="org.eclipse.cdt.ui.Keil armcc Error Parser;org.eclipse.cdt.ui.Keil armlink Error Parser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser" id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1822329534.56916247" name="gcc_Cortex-M4.fp" parent="cdt.managedbuild.config.gnu.cross.exe.release" postannouncebuildStep="Run Post-build steps" postbuildStep="${ProjDirPath}/post-build.bat &quot;${BuildArtifactFileBaseName}&quot; &quot;${BuildArtifactFileName}&quot;" preannouncebuildStep="" prebuildStep="">
+					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1822329534.56916247." name="/" resourcePath="">
+						<toolChain errorParsers="" id="cdt.managedbuild.toolchain.gnu.cross.exe.release.252656377" name="Cross GCC" nonInternalBuilderId="cdt.managedbuild.builder.gnu.cross" resourceTypeBasedDiscovery="true" superClass="cdt.managedbuild.toolchain.gnu.cross.exe.release">
+							<option id="cdt.managedbuild.option.gnu.cross.prefix.1659370635" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" value="arm-none-eabi-" valueType="string"/>
+							<option id="cdt.managedbuild.option.gnu.cross.path.591433722" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" value="C:\Program Files (x86)\GNU Tools ARM Embedded\7 2017-q4-major\bin" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.718868363" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
+							<builder autoBuildTarget="all" buildPath="${workspace_loc:/STM32_Sys}/Release" cleanBuildTarget="clean" errorParsers="" id="org.eclipse.cdt.build.core.internal.builder.577835875" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="org.eclipse.cdt.build.core.internal.builder"/>
+							<tool command="gcc" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="cdt.managedbuild.tool.gnu.cross.c.compiler.622204609" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
+								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.option.optimization.level.1975230602" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.c.optimization.level.most" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.debugging.level.601980578" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.default" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.dialect.std.1793751043" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.c99" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.preprocessor.def.symbols.586451061" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="NDEBUG"/>
+									<listOptionValue builtIn="false" value="__CMSIS_GENERIC"/>
+									<listOptionValue builtIn="false" value="__FPU_PRESENT=1U"/>
+									<listOptionValue builtIn="false" value="ARM_MATH_CM4"/>
+								</option>
+								<option id="gnu.c.compiler.option.misc.other.1113309515" name="Other flags" superClass="gnu.c.compiler.option.misc.other" useByScannerDiscovery="false" value="-c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nosys.specs --specs=nano.specs" valueType="string"/>
+								<option id="gnu.c.compiler.option.warnings.allwarn.1421211313" name="All warnings (-Wall)" superClass="gnu.c.compiler.option.warnings.allwarn" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="gnu.c.compiler.option.include.paths.872569162" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/CMSIS/Include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/amx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src&quot;"/>
+								</option>
+								<option id="gnu.c.compiler.option.optimization.flags.243750065" name="Other optimization flags" superClass="gnu.c.compiler.option.optimization.flags" useByScannerDiscovery="false" value="-fno-plt -fno-strict-aliasing -ffunction-sections -fdata-sections" valueType="string"/>
+								<option id="gnu.c.compiler.option.misc.pic.535798817" name="Position Independent Code (-fPIC)" superClass="gnu.c.compiler.option.misc.pic" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="gnu.c.compiler.option.preprocessor.preprocess.361871194" name="Preprocess only (-E)" superClass="gnu.c.compiler.option.preprocessor.preprocess" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<option id="gnu.c.compiler.option.include.files.1809288192" name="Include files (-include)" superClass="gnu.c.compiler.option.include.files" useByScannerDiscovery="false" valueType="includeFiles">
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/CMSIS/Include/core_cm4.h&quot;"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1372224768" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1559981652" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler">
+								<option id="gnu.cpp.compiler.option.optimization.level.1399743308" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.debugging.level.1491789762" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+							</tool>
+							<tool command="gcc" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GLDErrorParser" id="cdt.managedbuild.tool.gnu.cross.c.linker.1176040729" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker">
+								<option id="gnu.c.link.option.ldflags.654081677" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="-mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=nosys.specs --specs=nano.specs -T &quot;${ProjDirPath}/gcc.ld&quot; -Wall -Wl,--gc-sections,--entry=pawn_ModuleInit,-Map=&quot;${BuildArtifactFileBaseName}.map&quot;,--cref" valueType="string"/>
+								<option id="gnu.c.link.option.userobjs.663973285" name="Other objects" superClass="gnu.c.link.option.userobjs"/>
+								<option id="gnu.c.link.option.shared.1845492820" name="Shared (-shared)" superClass="gnu.c.link.option.shared" value="false" valueType="boolean"/>
+								<option id="gnu.c.link.option.nostart.1486925325" name="Do not use standard start files (-nostartfiles)" superClass="gnu.c.link.option.nostart" value="true" valueType="boolean"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.1791721292" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.1921436920" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.archiver.1215279904" name="Cross GCC Archiver" superClass="cdt.managedbuild.tool.gnu.cross.archiver"/>
+							<tool command="asm" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GASErrorParser" id="cdt.managedbuild.tool.gnu.cross.assembler.1369377295" name="Cross GCC Assembler" superClass="cdt.managedbuild.tool.gnu.cross.assembler">
+								<option id="gnu.both.asm.option.flags.1028286931" name="Assembler flags" superClass="gnu.both.asm.option.flags" value="-mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -fPIC -ffunction-sections -fdata-sections" valueType="string"/>
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.795919664" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1822329534.56916247.dhara/map.c" name="map.c" rcbsApplicability="disable" resourcePath="dhara/map.c" toolsToInvoke="cdt.managedbuild.tool.gnu.cross.c.compiler.1569955665">
+						<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.1569955665" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler.622204609">
+							<option id="gnu.c.compiler.option.misc.other.663341030" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-c --cpu Cortex-M4.fp -g --c99 --apcs=interwork --split_sections --diag_suppress=186 --diag_suppress=177" valueType="string"/>
+							<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.2012742455" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+						</tool>
+						<tool customBuildStep="true" id="org.eclipse.cdt.managedbuilder.ui.rcbs.1250200522.1647018770.950190811" name="Resource Custom Build Step">
+							<inputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.inputtype.1957802039.716327753.1909802155" name="Resource Custom Build Step Input Type">
+								<additionalInput kind="additionalinputdependency" paths=""/>
+							</inputType>
+							<outputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.outputtype.985395255.1707556658.1767318195" name="Resource Custom Build Step Output Type"/>
+						</tool>
+					</fileInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1822329534.56916247.FatFs/ffconf_template.h" name="ffconf_template.h" rcbsApplicability="disable" resourcePath="FatFs/ffconf_template.h" toolsToInvoke=""/>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1822329534.56916247.mdn_com/wifi_atwinc1500.h" name="wifi_atwinc1500.h" rcbsApplicability="disable" resourcePath="mdn_com/wifi_atwinc1500.h" toolsToInvoke=""/>
+					<sourceEntries>
+						<entry excluding="amx/pawn.c|amx/helpers.c|amx/float.c|amx/amxstring.c|amx/amxfile.c|amx/amxcore.c|USBH/Src/usbh_conf_template.c|LwIP/api/tcpip.c|LwIP/api/sockets.c|LwIP/api/netifapi.c|LwIP/api/netdb.c|LwIP/api/netbuf.c|LwIP/api/api_msg.c|LwIP/api/api_lib.c|LwIP/netif/slipif.c|LwIP/netif/lowpan6.c|LwIP/netif/ethernetif_template.c|LwIP/netif/ppp|LwIP/apps|HAL/Src/stm32f4xx_hal_mmc.c|HAL/Src/stm32f4xx_ll_utils.c|HAL/Src/stm32f4xx_ll_usart.c|HAL/Src/stm32f4xx_ll_tim.c|HAL/Src/stm32f4xx_ll_spi.c|HAL/Src/stm32f4xx_ll_rtc.c|HAL/Src/stm32f4xx_ll_rng.c|HAL/Src/stm32f4xx_ll_rcc.c|HAL/Src/stm32f4xx_ll_pwr.c|HAL/Src/stm32f4xx_ll_lptim.c|HAL/Src/stm32f4xx_ll_i2c.c|HAL/Src/stm32f4xx_ll_gpio.c|HAL/Src/stm32f4xx_ll_exti.c|HAL/Src/stm32f4xx_ll_dma2d.c|HAL/Src/stm32f4xx_ll_dma.c|HAL/Src/stm32f4xx_ll_dac.c|HAL/Src/stm32f4xx_ll_crc.c|HAL/Src/stm32f4xx_ll_adc.c|HAL/Src/Legacy/stm32f4xx_hal_can.c|lib/sram.c|HAL/Src/stm32f4xx_hal_pwr.c|HAL/Src/stm32f4xx_hal_pwr_ex.c|rm2m/uto_script_fldata.c|rm2m/uto_fw_fldata.c|rm2m/uto_script.c|rm2m/uto_fw.c|FatFs/ffconf_template.h|sec/sec_efm32AES.c|rm2m/jsmn.c|USB/Src/usbd_conf_template.c|obj|HAL/Src/stm32f4xx_ll_sdmmc.c|HAL/Src/stm32f4xx_ll_fsmc.c|HAL/Src/stm32f4xx_hal_wwdg.c|HAL/Src/stm32f4xx_hal_usart.c|HAL/Src/stm32f4xx_hal_timebase_rtc_wakeup_template.c|HAL/Src/stm32f4xx_hal_timebase_rtc_alarm_template.c|HAL/Src/stm32f4xx_hal_sram.c|HAL/Src/stm32f4xx_hal_spdifrx.c|HAL/Src/stm32f4xx_hal_smartcard.c|HAL/Src/stm32f4xx_hal_sd.c|HAL/Src/stm32f4xx_hal_sai.c|HAL/Src/stm32f4xx_hal_sai_ex.c|HAL/Src/stm32f4xx_hal_qspi.c|HAL/Src/stm32f4xx_hal_pccard.c|HAL/Src/stm32f4xx_hal_nor.c|HAL/Src/stm32f4xx_hal_msp_template.c|HAL/Src/stm32f4xx_hal_ltdc.c|HAL/Src/stm32f4xx_hal_ltdc_ex.c|HAL/Src/stm32f4xx_hal_lptim.c|HAL/Src/stm32f4xx_hal_irda.c|HAL/Src/stm32f4xx_hal_i2s.c|HAL/Src/stm32f4xx_hal_i2s_ex.c|HAL/Src/stm32f4xx_hal_i2c_ex.c|HAL/Src/stm32f4xx_hal_hash.c|HAL/Src/stm32f4xx_hal_hash_ex.c|HAL/Src/stm32f4xx_hal_fmpi2c.c|HAL/Src/stm32f4xx_hal_fmpi2c_ex.c|HAL/Src/stm32f4xx_hal_flash_ramfunc.c|HAL/Src/stm32f4xx_hal_dsi.c|HAL/Src/stm32f4xx_hal_dma2d.c|HAL/Src/stm32f4xx_hal_dma_ex.c|HAL/Src/stm32f4xx_hal_dfsdm.c|HAL/Src/stm32f4xx_hal_dcmi.c|HAL/Src/stm32f4xx_hal_dcmi_ex.c|HAL/Src/stm32f4xx_hal_dac.c|HAL/Src/stm32f4xx_hal_dac_ex.c|HAL/Src/stm32f4xx_hal_cryp.c|HAL/Src/stm32f4xx_hal_cryp_ex.c|HAL/Src/stm32f4xx_hal_crc.c|HAL/Src/stm32f4xx_hal_cec.c|HAL/Src/stm32f4xx_hal_can.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule moduleId="ilg.gnuarmeclipse.managedbuild.packs"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="STM32_Sys.cdt.managedbuild.target.gnu.cross.exe.2008249421" name="Executable" projectType="cdt.managedbuild.target.gnu.cross.exe"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="gcc_Cortex-M4.fp">
+			<resource resourceType="PROJECT" workspacePath="/modTest"/>
+		</configuration>
+		<configuration configurationName="armcc_Cortex-M4.fp"/>
+		<configuration configurationName="gcc_Cortex-M3"/>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/STM32_Sys"/>
+		</configuration>
+		<configuration configurationName="armcc_Cortex-M3">
+			<resource resourceType="PROJECT" workspacePath="/modTest"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.exe.release.1462116401;cdt.managedbuild.config.gnu.cross.exe.release.1462116401.;cdt.managedbuild.tool.gnu.cross.c.compiler.570882485;cdt.managedbuild.tool.gnu.c.compiler.input.1104690578">
+			<autodiscovery enabled="false" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1032610215;cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1032610215.;cdt.managedbuild.tool.gnu.cross.c.compiler.1915938621;cdt.managedbuild.tool.gnu.c.compiler.input.1576163695">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1822329534;cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1822329534.;cdt.managedbuild.tool.gnu.cross.c.compiler.2114506144;cdt.managedbuild.tool.gnu.c.compiler.input.1704974532">
+			<autodiscovery enabled="false" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1822329534">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.exe.release.1462116401">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1822329534.56916247;cdt.managedbuild.config.gnu.cross.exe.release.1462116401.1822329534.56916247.;cdt.managedbuild.tool.gnu.cross.c.compiler.622204609;cdt.managedbuild.tool.gnu.c.compiler.input.1372224768">
+			<autodiscovery enabled="false" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile"/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+</cproject>

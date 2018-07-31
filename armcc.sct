@@ -1,0 +1,15 @@
+LR_CODE 0 {
+  ER1 0 PI {
+    *(.module_info, +FIRST)
+    *(.module_init)
+  }
+  ER2 +0 {
+    .ANY (+RO)
+  }
+}
+LR_DATA +0 NOCOMPRESS {
+  RW1 0 PI {
+    .ANY (+RW +ZI)
+    *(.module_stack, +LAST)
+  }
+}
