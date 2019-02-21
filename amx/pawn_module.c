@@ -31,7 +31,9 @@
  ******************************************************************************/
 #include "sysdefs.h"
 #include "pawn_module.h"
-
+#if !defined __GNUC__
+  #include <rt_heap.h>
+#endif
 
 extern AMX_NATIVE_INFO amx_ModuleNatives[];
 extern int AMXEXPORT AMXAPI amx_ModuleInit(AMX *amx);
@@ -57,8 +59,15 @@ TPawn_ScriptModule pawn_ScriptModule;
  *   (stack usage from module functions + stack frame) & 8 byte aligned
  *   +1 because we can't control the aligning within pawn script */
 #if defined __GNUC__
+  #if defined MODULE_HEAP_SIZE
+    u32 pawn_ModuleHeap[((MODULE_HEAP_SIZE+3)&~3)/sizeof(u32)] __attribute__((section(".module_heap"), used));
+  #endif
   u32 pawn_ModuleStack[((MODULE_STACK_SIZE+MODULE_STACK_FRAME+7)&~7)/sizeof(u32)+1] __attribute__((section(".module_stack"), used));
 #else
+  #if defined MODULE_HEAP_SIZE
+    /* The parameters of _init_alloc(base, top) must be eight-byte aligned */
+    uint64_t pawn_ModuleHeap[((MODULE_HEAP_SIZE+7)&~7)/sizeof(uint64_t)] __attribute__((section(".module_heap"), zero_init, used));
+  #endif
   u32 pawn_ModuleStack[((MODULE_STACK_SIZE+MODULE_STACK_FRAME+7)&~7)/sizeof(u32)+1] __attribute__((section(".module_stack"), zero_init, used));
 #endif
 
@@ -76,40 +85,130 @@ const TPawn_ScriptModuleInfo pawn_ModuleInfo __attribute__((section(".module_inf
 
 
 /*******************************************************************************
- **************************   GLOBAL FUNCTIONS   *******************************
+ **************************   STATIC FUNCTIONS   *******************************
  ******************************************************************************/
 
+#define ELF_SHT_REL 0x09   /* ELF relocation entries without explicit addends */
+
+typedef struct
+{
+  u32 tag;
+  u32 length;
+  u32 value;
+} tlv_t;
+
+static void __check_tlv_relocs(tlv_t* tlv, u32 size, u32 offset)
+{
+  while(size)
+  {
+    u32 len;
+
+    switch(tlv->tag)
+    {
+      /* relocation table */
+      case ELF_SHT_REL:
+      {
+        u32 reloc_num = tlv->length / sizeof(u32);
+        u32* reloc_entry = &tlv->value;
+
+        /* patch RW1 relocations */
+        while(reloc_num)
+        {
+          u32* reloc_pos;
+
+          reloc_pos = (u32*)(*reloc_entry + offset);
+          *reloc_pos += offset;
+          reloc_entry++;
+          reloc_num--;
+        }
+        break;
+      }
+    }
+
+    /* next TLV */
+    len = 2*sizeof(u32) + tlv->length;
+    if(size > len)
+    {
+      tlv = (tlv_t*)((u32)tlv + len);
+      size -= len;
+    }
+    else
+      size = 0;
+  }
+}
+
+
 #if defined __GNUC__
-extern u32 __got_start, __got_end, __rw_base;
+extern u32 __got_start, __got_end, __rw_base, __rw_end;
 /* -fpic Generate position-independent code (PIC) suitable for use in a shared library,
          if supported for the target machine. Such code accesses all constant addresses
          through a global offset table (GOT). */
-static void __patch_got(void)
+static void __patch_module_relocs(void)
 {
   register u32 __sb_r9 __asm("r9");
   u32 offset;
   u32* got_entry;
+  u32* got_end;
+  u32* stack_base;
+  u32  stack_size;
 
   /* calculate offset of the table based on the __rw_base position */
   offset = __sb_r9 - (u32)&__rw_base;
 
-  /* patch every entry in the table */
+  /* calculate start & end addresses of GOT before it is patched! */
   got_entry = (u32*)(offset + (u32)&__got_start);
-  while((u32)got_entry < (offset + (u32)&__got_end))
+  got_end = (u32*)(offset + (u32)&__got_end);
+
+  /* patch every entry in the GOT */
+  while(got_entry < got_end)
   {
     *got_entry += offset;
     got_entry++;
   }
+
+  /* check for TLV structure which may be inserted in the module between heap and stack */
+  stack_base = &__rw_end;
+  stack_size = (offset + *((volatile u32*)&pawn_ModuleInfo.size)) - (u32)&__rw_end;
+  if(stack_size > sizeof(pawn_ModuleStack))
+    __check_tlv_relocs((tlv_t*)stack_base, stack_size - sizeof(pawn_ModuleStack), offset);
+}
+#else
+extern unsigned int Image$$ER1$$Base;
+extern unsigned int Image$$RW1$$ZI$$Limit;
+
+static void __patch_module_relocs(void)
+{
+  u32 offset;
+  u32* stack_base;
+  u32  stack_size;
+
+  /* get offset of the module */
+  offset = (u32)&Image$$ER1$$Base;
+
+  /* check for TLV structure which may be inserted in the module between heap and stack */
+  stack_base = (u32*)&Image$$RW1$$ZI$$Limit;
+  stack_size = (offset + *((volatile u32*)&pawn_ModuleInfo.size)) - (u32)&Image$$RW1$$ZI$$Limit;
+  if(stack_size > sizeof(pawn_ModuleStack))
+    __check_tlv_relocs((tlv_t*)stack_base, stack_size - sizeof(pawn_ModuleStack), offset);
 }
 #endif
+
+/*******************************************************************************
+ **************************   GLOBAL FUNCTIONS   *******************************
+ ******************************************************************************/
 
 /* linker entry point for unused section optimization & runtime initialization */
 void* pawn_ModuleInit(void) __attribute__((section(".module_init"), used));
 void* pawn_ModuleInit(void)
 {
-#if defined __GNUC__
-  /* only for gcc! global offset table patching */
-  __patch_got();
+  /* patch module link time absolute relocations */
+  __patch_module_relocs();
+
+#if !defined __GNUC__
+  /* only for armcc bare metal applications using heap */
+  #if defined MODULE_HEAP_SIZE
+    _init_alloc((uintptr_t)pawn_ModuleHeap, (uintptr_t)pawn_ModuleHeap + sizeof(pawn_ModuleHeap));
+  #endif
 #endif
 
   /* runtime initialization of position independent code/data! */

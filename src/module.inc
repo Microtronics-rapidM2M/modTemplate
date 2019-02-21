@@ -19,3 +19,4 @@ S_******************************************************************************
  ******************************************************************************S_
 native Float:modAvgF(Float:val1, Float:val2, Float:...);
 native Float:modAvgArrayF(const Float:arrayF[], size = sizeof arrayF);
+native modInfo();

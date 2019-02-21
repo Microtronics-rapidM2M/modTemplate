@@ -1,4 +1,4 @@
-LR_CODE 0 {
+LR_CODE 0 RELOC {
   ER1 0 PI {
     *(.module_info, +FIRST)
     *(.module_init)
@@ -6,10 +6,11 @@ LR_CODE 0 {
   ER2 +0 {
     .ANY (+RO)
   }
-}
-LR_DATA +0 NOCOMPRESS {
-  RW1 0 PI {
+  RW1 +0 {
     .ANY (+RW +ZI)
+    *(.module_heap, +LAST)
+  }
+  STACK +0 {
     *(.module_stack, +LAST)
   }
 }

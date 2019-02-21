@@ -1,0 +1,21 @@
+Release notes for
+*************************************************
+newlib-nano 2.5.0.20171222
+*************************************************
+
+This release includes the following items:
+* Bare metal EABI pre-built libraries for position independent code
+* Source code package (together with build scripts and instructions to setup
+  build environment), composed of:
+
+  * newlib-nano :
+    git://sourceware.org/git/newlib-cygwin.git commit eb4bfe4621ecaa49d0b4e586315286f8e4731046
+
+Supported target OS:
+* Bare metal EABI only
+
+Used compile flags:
+* export 'CFLAGS_FOR_TARGET=-g -Os -ffunction-sections -fdata-sections -fPIC -fno-plt -fno-strict-aliasing'
+
+Used newlib configuration:
+* ./configure --target=arm-none-eabi --prefix=../target-libs --disable-newlib-supplied-syscalls --enable-newlib-reent-small --disable-newlib-fvwrite-in-streamio --disable-newlib-fseek-optimization --disable-newlib-wide-orient --enable-newlib-nano-malloc --disable-newlib-unbuf-stream-opt --enable-lite-exit --enable-newlib-global-atexit --enable-newlib-nano-formatted-io --disable-nls

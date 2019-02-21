@@ -39,11 +39,14 @@ enum
 
 enum
 {
+  SVC_PAWN_DEBUG_TX  = 253,       /* transmit buffer to debug output */
   SVC_AMX_REGISTER   = 254,       /* Make native functions known */
   SVC_AMX_RAISEERROR = 255,       /* Flag an error */
 };
 
 SVCALL(SVC_SYS_EXCEPT, void, Sys_ForceExcept(unsigned long int u32Code, unsigned long int u32Param));
 SVCALL(SVC_SYS_EXISTS, long int, Sys_ExistsSVC(unsigned char u8SVC));
+
+SVCALL(SVC_PAWN_DEBUG_TX, int, Pawn_DebugTx(const char *ptr, int len));
 
 #endif

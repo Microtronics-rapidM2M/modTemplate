@@ -2,7 +2,13 @@
 
 :: extract load regions from elf file
 ..\objcopy -O binary -j ER1 -j ER2 -j GOT %2 ./ER1
-..\objcopy -O binary -j RW1 --set-section-flags RW1=alloc,load,contents %2 ./RW1
+..\objcopy -O binary -j RW1 --set-section-flags RW1=alloc,load,contents %2 ./RW1tmp
+..\objcopy -O binary -j STACK --set-section-flags STACK=alloc,load,contents %2 ./STACK
+
+:: extract RW1 relocations from elf file
+..\rel_dump %2 .relRW1
+
+COPY /b .\RW1tmp + .\.relRW1 + .\STACK .\RW1
 
 :: build pawn module
 ..\mod_compile .\ER1 .\RW1 .\module.i
@@ -20,4 +26,5 @@ if [%3] equ [] (
 :: clean up
 DEL /F /Q .\ER*
 DEL /F /Q .\RW*
+DEL /F /Q .\STACK*
 DEL /F /Q .\*.i

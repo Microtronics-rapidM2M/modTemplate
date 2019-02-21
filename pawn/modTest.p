@@ -3,8 +3,6 @@
 /* forward declarations of public functions */
 forward public Timer5s();
 
-native loadmodule(mod{});
-
 /* application entry point */
 main()
 {
@@ -26,6 +24,7 @@ main()
     printf("rM2M_TimerAddExt(%d) = %d\r\n", iIdx, iResult);
 
   printf("---- load modTemplate ----\r\n");
+  printf("  modInfo()      %s\r\n", exists("modInfo") ? "OK" : "N/A");
   printf("  modAvgF()      %s\r\n", exists("modAvgF") ? "OK" : "N/A");
   printf("  modAvgArrayF() %s\r\n", exists("modAvgArrayF") ? "OK" : "N/A");
 
@@ -35,6 +34,7 @@ main()
   else
     printf("loaded modTemplate successfully\r\n");
 
+  printf("  modInfo()      %s\r\n", exists("modInfo") ? "OK" : "N/A");
   printf("  modAvgF()      %s\r\n", exists("modAvgF") ? "OK" : "N/A");
   printf("  modAvgArrayF() %s\r\n", exists("modAvgArrayF") ? "OK" : "N/A");
 }
@@ -46,6 +46,7 @@ public Timer5s()
   new Float:faValues[] = [1.0, 2.0, 3.0, 4.0, 5.0];
 
   printf("---- run modTemplate ----\r\n");
+  modInfo();
 
   fAvg = modAvgF(1.0, 2.0, 3.0, 4.0, 5.0);
   printf("modAvgF = %f\r\n", fAvg);

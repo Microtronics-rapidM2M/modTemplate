@@ -29,6 +29,7 @@
  * third party, arising from your use of this Software.
  *
  ******************************************************************************/
+#include <stdio.h>
 #include "sysdefs.h"
 #include "pawn_module.h"
 
@@ -133,6 +134,53 @@ static cell AMX_NATIVE_CALL modAvgArrayF(AMX *amx, const cell *params)
   return(amx_ftoc(fAvg));
 }
 
+/***************************************************************************//**
+ * @brief
+ *   Show information about this module.
+ *
+ * @pawn
+ *   native modInfo();
+ ******************************************************************************/
+#define _STR(x)  __STR(x)
+#define __STR(x) #x
+
+#if defined __GNUC__
+  const char* cszModule_Compiler = "GCC";
+#else
+  const char* cszModule_Compiler = "ARMCC";
+#endif
+
+#if defined __SOFTFP__
+  const char* cszModule_FPU = "soft FPU";
+#else
+  const char* cszModule_FPU = "hard FPU";
+#endif
+
+static u8 u8Module_MajorVersion = MODULE_MAJOR_VERSION;
+static u8 u8Module_MinorVersion = MODULE_MINOR_VERSION;
+
+static struct
+{
+  const char* name;
+  const u8* major;
+  const u8* minor;
+} sModule_Info =
+{
+  _STR(MODULE_NAME),
+  &u8Module_MajorVersion,
+  &u8Module_MinorVersion,
+};
+
+static cell AMX_NATIVE_CALL modInfo(AMX *amx, const cell *params)
+{
+  /* test of runtime relocations */
+  printf("%s %02dv%03d (%s, %s)\r\n", sModule_Info.name,
+    *sModule_Info.major, *sModule_Info.minor,
+    cszModule_Compiler, cszModule_FPU);
+
+  return(0);
+}
+
 
 /*******************************************************************************
  **************************   GLOBAL FUNCTIONS   *******************************
@@ -148,6 +196,7 @@ static cell AMX_NATIVE_CALL modAvgArrayF(AMX *amx, const cell *params)
 #define MODULE_NATIVES \
   _NATIVE_DEF(modAvgF) \
   _NATIVE_DEF(modAvgArrayF) \
+  _NATIVE_DEF(modInfo) \
 /* end of define */
 
 /***************************************************************************//**

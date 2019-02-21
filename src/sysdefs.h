@@ -38,7 +38,7 @@
 
 /* Module version number */
 #define MODULE_MAJOR_VERSION 0
-#define MODULE_MINOR_VERSION 1
+#define MODULE_MINOR_VERSION 2
 
 /* Module name */
 #define MODULE_NAME modTemplate
@@ -46,5 +46,8 @@
 /* Maximum stack usage from module functions (depends on build configuration!).
  * The resulting stack is bigger (stack frame added & 8 byte aligned) */
 #define MODULE_STACK_SIZE 64
+
+/* Optional heap configuration for module */
+#define MODULE_HEAP_SIZE 1024
 
 #endif /*__SYSDEFS_H*/
