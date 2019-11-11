@@ -6,9 +6,10 @@
 ..\objcopy -O binary -j STACK --set-section-flags STACK=alloc,load,contents %2 ./STACK
 
 :: extract RW1 relocations from elf file
+..\rel_dump %2 .relER2
 ..\rel_dump %2 .relRW1
 
-COPY /b .\RW1tmp + .\.relRW1 + .\STACK .\RW1
+COPY /b .\RW1tmp + .\.relER2 + .\.relRW1 + .\STACK .\RW1
 
 :: build pawn module
 ..\mod_compile .\ER1 .\RW1 .\module.i
